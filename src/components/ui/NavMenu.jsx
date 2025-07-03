@@ -10,7 +10,7 @@ const NavMenu = ({ isActive }) => {
           isActive("/")
             ? "border-b-coffee-dark border-b-2"
             : "before:content-[''] before:absolute before:bottom-0 before:left-0 before:w-0 before:h-[2px] before:bg-coffee-dark before:transition-all before:duration-300 hover:before:w-full transition-colors duration-300"
-        } hover:text-coffee-dark`}
+        } hover:text-coffee-dark transition-colors duration-300`}
       >
         Home
       </NavLink>
