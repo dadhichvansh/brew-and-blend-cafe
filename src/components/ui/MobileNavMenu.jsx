@@ -84,7 +84,7 @@ const MobileNavMenu = ({ onClose }) => {
             <li
               key={navItem.to}
               ref={addToRefs}
-              className={`border-b-underline-color text-xl pb-4`}
+              className={`border-b-underline-color text-4xl pb-4`}
             >
               <NavLink to={navItem.to} onClick={onClose}>
                 {navItem.name}
@@ -94,8 +94,8 @@ const MobileNavMenu = ({ onClose }) => {
         </ul>
 
         <div className="px-5 pointer" ref={preorderBtnRef}>
-          <Button className="mt-4 bg-coffee-dark hover:bg-coffee-darkest font-outfit text-white transition-all duration-300  transform hover:scale-105 w-full">
-            <NavLink to={"/order"} onClick={onClose}>
+          <Button className="mt-4 bg-coffee-dark hover:bg-coffee-darkest font-outfit text-white transition-all duration-300 transform hover:scale-105 w-full">
+            <NavLink to={"/order"} className={`text-base`} onClick={onClose}>
               Pre-Order
             </NavLink>
           </Button>

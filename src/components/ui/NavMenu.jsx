@@ -8,7 +8,7 @@ const NavMenu = ({ isActive }) => {
         to="/"
         className={`relative nav-link ${
           isActive("/")
-            ? "border-b-coffee-dark border-b-2"
+            ? "border-b-coffee-dark border-b-2 text-coffee-dark"
             : "before:content-[''] before:absolute before:bottom-0 before:left-0 before:w-0 before:h-[2px] before:bg-coffee-dark before:transition-all before:duration-300 hover:before:w-full transition-colors duration-300"
         } hover:text-coffee-dark transition-colors duration-300`}
       >
@@ -18,7 +18,7 @@ const NavMenu = ({ isActive }) => {
         to="/menu"
         className={`relative nav-link ${
           isActive("/menu")
-            ? "border-b-coffee-dark border-b-2"
+            ? "border-b-coffee-dark border-b-2 text-coffee-dark"
             : "before:content-[''] before:absolute before:bottom-0 before:left-0 before:w-0 before:h-[2px] before:bg-coffee-dark before:transition-all before:duration-300 hover:before:w-full transition-colors duration-300"
         } hover:text-coffee-dark transition-colors duration-300`}
       >
@@ -28,7 +28,7 @@ const NavMenu = ({ isActive }) => {
         to="/about"
         className={`relative nav-link ${
           isActive("/about")
-            ? "border-b-coffee-dark border-b-2"
+            ? "border-b-coffee-dark border-b-2 text-coffee-dark"
             : "before:content-[''] before:absolute before:bottom-0 before:left-0 before:w-0 before:h-[2px] before:bg-coffee-dark before:transition-all before:duration-300 hover:before:w-full transition-colors duration-300"
         } hover:text-coffee-dark transition-colors duration-300`}
       >
@@ -38,7 +38,7 @@ const NavMenu = ({ isActive }) => {
         to="/location"
         className={`relative nav-link ${
           isActive("/location")
-            ? "border-b-coffee-dark border-b-2"
+            ? "border-b-coffee-dark border-b-2 text-coffee-dark"
             : "before:content-[''] before:absolute before:bottom-0 before:left-0 before:w-0 before:h-[2px] before:bg-coffee-dark before:transition-all before:duration-300 hover:before:w-full transition-colors duration-300"
         } hover:text-coffee-dark transition-colors duration-300`}
       >
@@ -48,7 +48,7 @@ const NavMenu = ({ isActive }) => {
         to="/contact"
         className={`relative nav-link ${
           isActive("/contact")
-            ? "border-b-coffee-dark border-b-2"
+            ? "border-b-coffee-dark border-b-2 text-coffee-dark"
             : "before:content-[''] before:absolute before:bottom-0 before:left-0 before:w-0 before:h-[2px] before:bg-coffee-dark before:transition-all before:duration-300 hover:before:w-full transition-colors duration-300"
         } hover:text-coffee-dark transition-colors duration-300`}
       >
