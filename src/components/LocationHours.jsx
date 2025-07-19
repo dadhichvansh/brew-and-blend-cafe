@@ -26,7 +26,8 @@ const LocationHours = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative py-20 md:py-32 px-5 md:px-20 font-outfit"
+      id="location"
+      className="relative py-20 md:py-32 px-5 md:px-20 font-outfit bg-[#fcfaf8]"
     >
       <div className="section-container">
         <div className="text-center mb-12">
@@ -92,8 +93,9 @@ const LocationHours = () => {
                 United States
               </p>
               <Button
+                variant="outline"
                 size="sm"
-                className="border-coffee-dark text-coffee-dark hover:bg-coffee-dark/10 group border"
+                className="border-coffee-dark text-coffee-dark hover:bg-coffee-dark/10 active:bg-coffee-light group cursor-pointer"
               >
                 <NavLink to="/location" className={`flex items-center gap-2`}>
                   Get Directions
@@ -126,8 +128,9 @@ const LocationHours = () => {
                 </li>
               </ul>
               <Button
+                variant="outline"
                 size="sm"
-                className="border-coffee-dark text-coffee-dark hover:bg-coffee-dark/10 group border"
+                className="border-coffee-dark text-coffee-dark hover:bg-coffee-dark/10 active:bg-coffee-light group cursor-pointer"
               >
                 <NavLink to="/location" className={`flex items-center gap-2`}>
                   View Details
@@ -154,8 +157,9 @@ const LocationHours = () => {
                 </a>
               </p>
               <Button
+                variant="outline"
                 size="sm"
-                className="border-coffee-dark text-coffee-dark hover:bg-coffee-dark/10 group border"
+                className="border-coffee-dark text-coffee-dark hover:bg-coffee-dark/10 active:bg-coffee-light group cursor-pointer"
               >
                 <a
                   href="tel:+14155551234"
@@ -185,8 +189,9 @@ const LocationHours = () => {
                 </a>
               </p>
               <Button
+                variant="outline"
                 size="sm"
-                className="border-coffee-dark text-coffee-dark hover:bg-coffee-dark/10 group border"
+                className="border-coffee-dark text-coffee-dark hover:bg-coffee-dark/10 active:bg-coffee-light group cursor-pointer"
               >
                 <NavLink to="/contact" className={`flex items-center gap-2`}>
                   Contact Us

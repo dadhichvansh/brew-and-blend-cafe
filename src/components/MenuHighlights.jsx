@@ -8,8 +8,7 @@ import almond_croissant from "/menu-highlights/almond-croissant.avif";
 import cold_brew from "/menu-highlights/cold-brew.avif";
 import chocolate_tart from "/menu-highlights/chocolate-tart.avif";
 import cinnamon_roll from "/menu-highlights/cinnamon-roll.avif";
-import { ItemCard } from "./ui/ItemCard";
-import Header from "./Header";
+import { MenuCard } from "./MenuCard";
 
 const MENU_HIGHLIGHTS = [
   {
@@ -79,8 +78,8 @@ const MenuHighlights = () => {
 
   return (
     <section
-      id="menu-highlights"
-      className="section-container font-outfit mb-16"
+      id="menu"
+      className="section-container font-outfit py-16 bg-[#fcfaf8]"
     >
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12 mt-16 transition-all duration-700 animate-fade-up">
@@ -96,11 +95,12 @@ const MenuHighlights = () => {
             {["all", "coffee", "pastry"].map((cat) => (
               <Button
                 key={cat}
+                variant={activeCategory === cat ? "default" : "outline"}
                 onClick={() => setActiveCategory(cat)}
                 className={`${
                   activeCategory === cat
                     ? "bg-coffee-dark hover:bg-coffee-darkest"
-                    : "border border-coffee-dark text-coffee-dark hover:bg-coffee-dark/10"
+                    : "border-coffee-dark text-coffee-dark hover:bg-coffee-dark/10"
                 } cursor-pointer`}
               >
                 {cat === "all"
@@ -112,14 +112,14 @@ const MenuHighlights = () => {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-          <ItemCard visibleItems={visibleItems} />
+          <MenuCard visibleItems={visibleItems} />
         </div>
 
         <div
           className="text-center mt-12 animate-fade-up opacity-0"
           style={{ animationDelay: "700ms", animationFillMode: "forwards" }}
         >
-          <Button className="bg-coffee-dark hover:bg-coffee-darkest group">
+          <Button className="bg-coffee-dark hover:bg-coffee-darkest active:bg-coffee-medium cursor-pointer group">
             <NavLink
               to="/menu"
               className={`flex items-center gap-2 text-white`}
