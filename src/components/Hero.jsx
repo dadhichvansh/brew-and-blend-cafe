@@ -1,11 +1,13 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import hero_image from "/hero-section/hero-image.avif";
 import { Button } from "./ui/Button";
 import { NavLink } from "react-router-dom";
 import { Clock, Coffee, MapPin } from "lucide-react";
+import { NavigationContext } from "./NavigationProvider";
 
 const Hero = () => {
   const [loaded, setLoaded] = useState(false);
+  const { scrollToSection } = useContext(NavigationContext);
 
   useEffect(() => {
     setLoaded(true);
@@ -13,8 +15,8 @@ const Hero = () => {
 
   return (
     <section
-      id="hero"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      id="home"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-3.5"
     >
       {/* Background image with overlay */}
       <div className="absolute inset-0 -z-10">
@@ -63,6 +65,7 @@ const Hero = () => {
             <Button
               size="lg"
               variant="outline"
+              onClick={() => scrollToSection("/menu")}
               className="border-white text-white bg-coffee-medium/30 hover:bg-coffee-medium/50 active:bg-coffee-light w-full sm:w-auto cursor-pointer"
             >
               <NavLink to="/menu">Explore Menu</NavLink>
@@ -83,13 +86,6 @@ const Hero = () => {
               <span>123 Coffee Street</span>
             </div>
           </div>
-        </div>
-      </div>
-
-      {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
-        <div className="w-[30px] h-[50px] border-2 border-white/50 rounded-full flex justify-center">
-          <div className="w-1 h-3 bg-white/70 rounded-full mt-2 animate-bounce"></div>
         </div>
       </div>
     </section>
