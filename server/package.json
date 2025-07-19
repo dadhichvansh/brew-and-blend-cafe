@@ -1,0 +1,18 @@
+{
+  "name": "brew-and-blend-cafe",
+  "version": "1.0.0",
+  "description": "Artisanal Coffee & Cozy Vibes - Brew&Blend Cafe",
+  "license": "ISC",
+  "author": "Vansh Dadhich",
+  "type": "module",
+  "main": "app.js",
+  "scripts": {
+    "dev": "node --watch app.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.0",
+    "express": "^5.1.0",
+    "zod": "^4.0.5"
+  }
+}
