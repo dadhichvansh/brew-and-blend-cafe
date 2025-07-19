@@ -1,10 +1,10 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Home from "./components/Home";
-import Menu from "./components/Menu";
+import Hero from "./components/Hero";
+import MenuHighlights from "./components/MenuHighlights";
 import About from "./components/About";
-import Location from "./components/Location";
+import LocationHours from "./components/LocationHours";
 import Contact from "./components/Contact";
-import Layout from "./pages/layout";
+import Layout from "./pages/Layout";
 import ErrorPage from "./pages/ErrorPage";
 
 const App = () => {
@@ -14,26 +14,11 @@ const App = () => {
       element: <Layout />,
       errorElement: <ErrorPage />,
       children: [
-        {
-          path: "/",
-          element: <Home />,
-        },
-        {
-          path: "/menu",
-          element: <Menu />,
-        },
-        {
-          path: "/about",
-          element: <About />,
-        },
-        {
-          path: "/location",
-          element: <Location />,
-        },
-        {
-          path: "/contact",
-          element: <Contact />,
-        },
+        { path: "/", element: <Hero /> },
+        { path: "/menu", element: <MenuHighlights /> },
+        { path: "/about", element: <About /> },
+        { path: "/location", element: <LocationHours /> },
+        { path: "/contact", element: <Contact /> },
       ],
     },
   ]);
