@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --font-outfit: "Outfit", sans-serif;
+  --font-playfair: "Playfair Display", serif;
+
+  --color-coffee-lightest: rgb(247 242 238 / 1);
+  --color-coffee-light: rgb(230 217 207 / 1);
+  --color-coffee-medium: rgb(183 159 140 / 1);
+  --color-coffee-medium-20: rgb(183 159 140 / 20%);
+  --color-coffee-medium-30: #b79f8c4d;
+  --color-coffee-medium-50: #b79f8c80;
+  --color-coffee-dark: #8c6e54;
+  --color-coffee-darkest: #5e462a;
+  --color-coffee-brown: #664f35;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.6s ease forwards;
+}
