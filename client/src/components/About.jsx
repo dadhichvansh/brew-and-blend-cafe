@@ -146,7 +146,7 @@ const About = () => {
               ))}
             </div>
 
-            <Button
+            {/* <Button
               className="bg-coffee-dark hover:bg-coffee-darkest active:bg-coffee-medium group transform transition-all cursor-pointer"
               style={{
                 opacity: isVisible ? 1 : 0,
@@ -163,7 +163,7 @@ const About = () => {
                   className="ml-2 group-hover:translate-x-1 transition-transform"
                 />
               </NavLink>
-            </Button>
+            </Button> */}
           </div>
         </div>
       </div>
