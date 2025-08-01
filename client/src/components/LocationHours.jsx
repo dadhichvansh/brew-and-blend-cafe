@@ -92,7 +92,7 @@ const LocationHours = () => {
                 <br />
                 United States
               </p>
-              <Button
+              {/* <Button
                 variant="outline"
                 size="sm"
                 className="border-coffee-dark text-coffee-dark hover:bg-coffee-dark/10 active:bg-coffee-light group cursor-pointer"
@@ -104,7 +104,7 @@ const LocationHours = () => {
                     className="ml-2 group-hover:translate-x-1 transition-transform"
                   />
                 </NavLink>
-              </Button>
+              </Button> */}
             </div>
 
             {/* Hours */}
@@ -127,7 +127,7 @@ const LocationHours = () => {
                   <span>8AM - 8PM</span>
                 </li>
               </ul>
-              <Button
+              {/* <Button
                 variant="outline"
                 size="sm"
                 className="border-coffee-dark text-coffee-dark hover:bg-coffee-dark/10 active:bg-coffee-light group cursor-pointer"
@@ -139,7 +139,7 @@ const LocationHours = () => {
                     className="ml-2 group-hover:translate-x-1 transition-transform"
                   />
                 </NavLink>
-              </Button>
+              </Button> */}
             </div>
 
             {/* Phone */}
@@ -156,7 +156,7 @@ const LocationHours = () => {
                   +1 (415) 555-1234
                 </a>
               </p>
-              <Button
+              {/* <Button
                 variant="outline"
                 size="sm"
                 className="border-coffee-dark text-coffee-dark hover:bg-coffee-dark/10 active:bg-coffee-light group cursor-pointer"
@@ -171,7 +171,7 @@ const LocationHours = () => {
                     className="ml-2 group-hover:translate-x-1 transition-transform"
                   />
                 </a>
-              </Button>
+              </Button> */}
             </div>
 
             {/* Email */}
@@ -188,7 +188,7 @@ const LocationHours = () => {
                   hello@brewandblend.com
                 </a>
               </p>
-              <Button
+              {/* <Button
                 variant="outline"
                 size="sm"
                 className="border-coffee-dark text-coffee-dark hover:bg-coffee-dark/10 active:bg-coffee-light group cursor-pointer"
@@ -200,7 +200,7 @@ const LocationHours = () => {
                     className="ml-2 group-hover:translate-x-1 transition-transform"
                   />
                 </NavLink>
-              </Button>
+              </Button> */}
             </div>
           </div>
         </div>
