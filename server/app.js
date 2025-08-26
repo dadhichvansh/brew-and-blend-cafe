@@ -4,7 +4,7 @@ import cors from "cors";
 import path from "path";
 import { connectDB } from "./src/db/db.js";
 import { PORT } from "./src/validations/port.validation.js";
-import { menuRoute } from "./src/routes/menu/menu.route.js";
+import { menuHighlightsRoutes } from "./src/routes/menu-highlights.route.js";
 
 const app = express();
 const staticPath = path.join(import.meta.dirname, "public", "images");
@@ -21,10 +21,9 @@ app.use(
   })
 );
 
-// routes
-app.use("/", menuRoute);
-app.use("/admin", menuRoute);
+// menu highlights routes
+app.use("/", menuHighlightsRoutes);
 
-app.listen(PORT, () =>
-  console.log(`Listening to server on http://localhost:${PORT}`)
-);
+app.listen(PORT, () => {
+  console.log(`Listening to server at http://localhost:${PORT}`);
+});
