@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
-import { db } from "../validations/db-uri.validation.js";
+import { MONGODB_URI, DB_NAME } from "../validations/db-uri.validation.js";
 
-const connectionString = `${db.MONGODB_URI}/${db.DB_NAME}`;
+const connectionString = `${MONGODB_URI}/${DB_NAME}`;
 
 export const connectDB = async () => {
   try {
