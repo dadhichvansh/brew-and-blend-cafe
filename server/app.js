@@ -1,28 +1,32 @@
 import "dotenv/config";
 import express from "express";
 import cors from "cors";
-import path from "path";
 import { connectDB } from "./src/db/db.js";
 import { PORT } from "./src/validations/port.validation.js";
-import { menuHighlightsRoutes } from "./src/routes/menu-highlights.route.js";
+import { menuRoutes } from "./src/routes/menu.route.js";
 
+// initializing express app instance and connecting to the database
 const app = express();
-const staticPath = path.join(import.meta.dirname, "public", "images");
 connectDB();
 
+// built-in middlewares
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(express.static(staticPath));
+
+// serve public images and uploads
+app.use(express.static("public"));
 app.use("/uploads", express.static("uploads"));
+
+// CORS - allow credentials for session cookies & allow methods we need
 app.use(
   cors({
-    origin: ["http://localhost:5173"],
-    methods: ["GET"],
+    origin: ["http://localhost:5173"], // frontend origin(s)
+    methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
+    credentials: true,
   })
 );
 
-// menu highlights routes
-app.use("/", menuHighlightsRoutes);
+app.use("/api", menuRoutes);
 
 app.listen(PORT, () => {
   console.log(`Listening to server at http://localhost:${PORT}`);
